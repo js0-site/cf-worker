@@ -9,7 +9,7 @@ while {[catch {exec lsof -ti:9229} pid] == 0 && $retries < 10} {
 }
 sleep 1
 spawn bun dev
-expect "Ready"
+expect "Ready on "
 puts [exec curl -s http://localhost:8787/__scheduled]
 send \003
 expect eof

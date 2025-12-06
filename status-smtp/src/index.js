@@ -9,6 +9,7 @@ export default {
   },
 
   async scheduled(_event, { SMTP_PASSWORD, SMTP_USER }, _ctx) {
+    console.log(SMTP_USER);
     const li = await smtpCheck("smtp.js0.site", SMTP_USER, SMTP_PASSWORD);
     console.log(li);
   },
