@@ -1,0 +1,20 @@
+cd $DIR
+
+SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}" .sh)
+
+TMP_SCRIPT_NAME=.tmp/$SCRIPT_NAME
+
+if [ ${#1} -eq 0 ]; then
+  if [ -f "$TMP_SCRIPT_NAME" ]; then
+    PROJECT=$(cat $TMP_SCRIPT_NAME)
+  else
+    echo "❯ $0 项目名"
+    exit 1
+  fi
+else
+  mkdir -p .tmp
+  echo $1 >$TMP_SCRIPT_NAME
+  PROJECT=$1
+fi
+
+cd $PROJECT

@@ -1,0 +1,16 @@
+{
+  "name": "status-smtp",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev --test-scheduled",
+    "start": "wrangler dev --test-scheduled"
+  },
+  "devDependencies": {
+    "wrangler": "^4.53.0"
+  },
+  "dependencies": {
+    "@3-/smtp_check": "^0.1.1"
+  }
+}

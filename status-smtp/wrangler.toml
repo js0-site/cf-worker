@@ -1,0 +1,13 @@
+name = "status-smtp"
+main = "src/index.js"
+compatibility_date = "2025-12-06"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[triggers]
+crons = ["* * * * *"]
+
+[limits]
+cpu_ms = 300000
