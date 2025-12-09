@@ -1,0 +1,13 @@
+name = "_tmpl"
+main = "src/index.js"
+compatibility_flags = ["nodejs_compat"]
+preview_urls = false
+
+[observability]
+enabled = true
+
+[triggers]
+crons = ["* * * * *"]
+
+# [limits]
+# cpu_ms = 300000
